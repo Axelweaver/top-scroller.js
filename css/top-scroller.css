@@ -1,0 +1,19 @@
+.top-scroller {
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0, 79, 157, .05);
+    width: 4.3333%;
+    z-index: 10;
+    left: 0;
+    cursor: pointer;
+    font-size: 75%;
+    font-weight: bold;
+    padding: 122px 2px;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+}
+
+.top-scroller:hover {
+    background-color: rgba(0, 79, 157, .25);
+}

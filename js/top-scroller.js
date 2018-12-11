@@ -19,11 +19,9 @@
             { name: "hidden", value: "hidden" }
         ]);
 
-    var uparrow = create("span", [{ name: "class", value: "fa fa-chevron-up" }]);
 
     var title = create("span");
-    title.innerText = " наверх";
-    scroller.appendChild(uparrow);
+    title.innerHTML = "&#8743; наверх";
     scroller.appendChild(title);
     document.body.appendChild(scroller);
     var onScrollHandler = function() {
@@ -85,21 +83,16 @@
             return window.pageYOffset;
         },
         changeScroller: function() {
-            var addClassName = "fa-chevron-down";
-            var removeClassName = "fa-chevron-up";
-            var titleValue = "&nbsp;вниз";
+            var titleValue = "&#8744;&nbsp;вниз";
 
             if (window.bodyScrollLastPosition != undefined) {
                 window.topScroller.addClickScrollDownEvent();
 
             } else {
-                addClassName = "fa-chevron-up";
-                removeClassName = "fa-chevron-down";
-                titleValue = "&nbsp;наверх";
+
+                titleValue = "&#8743;&nbsp;наверх";
                 window.topScroller.addClickScrollTopEvent();
             }
-            uparrow.classList.add(addClassName);
-            uparrow.classList.remove(removeClassName);
             title.innerHTML = titleValue;
 
         },
